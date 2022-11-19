@@ -31,7 +31,7 @@ public class HamcrestMatchersApiTest {
                 accept(ContentType.JSON)
                 .and().pathParam("id",15)
                 .when()
-                .get("http://52.207.61.129:8000/api/spartans/{id}")
+                .get("http://54.160.179.72:8000/api/spartans/{id}")
                 .then()
                 .statusCode(200)
                 .and().assertThat()
@@ -51,23 +51,20 @@ public class HamcrestMatchersApiTest {
         given()
                 .accept(ContentType.JSON)
                 .and()
-                .pathParam("id",10423)
-                .and()
-
-                .when()
-                .get("http://api.cybertektraining.com/teacher/{id}")
+                .pathParam("id",3)
+                .get("http://api.training.cydeo.com/teacher/{id}")
                 .then()
                 .statusCode(200)
                 .and()
                 .contentType("application/json;charset=UTF-8")
                 .and()
-                .header("Content-Length",is("236"))
+               // .header("Content-Length",is("236"))
                 .and()
                 .header("Date",notNullValue())
                 .and().assertThat()
-                .body("teachers[0].firstName",is("Alexander"))
-                .body("teachers[0].lastName",is("Syrup"))
-                .body("teachers[0].gender",equalTo("male"));
+                .body("teachers[0].firstName",is("Tet"))
+                .body("teachers[0].lastName",is("DS"))
+                .body("teachers[0].gender",equalTo("Male"));
 
     }
 
@@ -79,7 +76,7 @@ public class HamcrestMatchersApiTest {
         given()
                 .accept(ContentType.JSON)
                 .when()
-                .get("http://api.cybertektraining.com/teacher/all")
+                .get("http://api.training.cydeo.com/teacher/all")
                 .then()
                 .statusCode(200)
                 .and()
