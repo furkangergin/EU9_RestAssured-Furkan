@@ -64,6 +64,7 @@ public class HamcrestMatchersIntro {
 
         String str ="  ";
 
+
         //check if above str is blank
         assertThat(str,blankString());
         //check if trimmed str is empty string
