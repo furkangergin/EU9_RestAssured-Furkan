@@ -157,6 +157,10 @@ public class SpartanPostRequestDemo extends SpartanTestBase {
     }
 
 
+
+
+
+
     //Create one SpartanUtil class
     //create a static method that returns Map<String,Object>
     //use faker library(add as a depedency) to assign each time different information

@@ -18,14 +18,15 @@ public class PutAndPatchRequestDemo extends SpartanTestBase {
         Map<String,Object> putRequestMap = new LinkedHashMap<>();
         putRequestMap.put("name","BruceWayne");
         putRequestMap.put("gender","Male");
-        putRequestMap.put("phone",8811111111L);
+        putRequestMap.put("phone",9811111111L);
 
         given().contentType(ContentType.JSON) //hey api I am sending JSON body
                 .body(putRequestMap).log().body()
-                .and().pathParam("id",388)
+                .and().pathParam("id",106)
                 .when().put("/api/spartans/{id}")
                 .then()
                 .statusCode(204);
+
 
         //send a GET request after update, make sure updated field changed, or the new info matching
         //with requestBody that we send
@@ -42,7 +43,7 @@ public class PutAndPatchRequestDemo extends SpartanTestBase {
 
         given().contentType(ContentType.JSON) //hey api I am sending JSON body
                 .body(putRequestMap).log().body()
-                .and().pathParam("id",388)
+                .and().pathParam("id",106)
                 .when().patch("/api/spartans/{id}")
                 .then()
                 .statusCode(204);
