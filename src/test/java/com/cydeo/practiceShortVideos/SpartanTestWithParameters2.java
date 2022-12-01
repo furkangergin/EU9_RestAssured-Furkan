@@ -6,6 +6,9 @@ import io.restassured.response.Response;
 import org.junit.jupiter.api.Test;
 import org.testng.annotations.BeforeClass;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class SpartanTestWithParameters2 {
 
 
@@ -22,4 +25,7 @@ public class SpartanTestWithParameters2 {
 
         response1.body().prettyPrint();
     }
-}
+
+
+    }
+
