@@ -20,23 +20,29 @@ public class govXmlTest {
         //get all unknowns
         //get 2005 other
         //get 2007 _address
-        Response response = get("https://data.ct.gov/api/views/qm34-pq7e/rows.xml")
+        Response response = get("https://data.ct.gov/resource/y6p2-px98.xml")
                             .then().statusCode(200).extract().response();
 
         XmlPath xmlPath = response.xmlPath();
 
-        //get all the years
-        List<Integer> years = xmlPath.getList("response.row.row.year");
-        System.out.println("list = " + years);
-        //get all unknowns
-        List<Integer> unknowns = xmlPath.getList("response.row.row.unknown");
+        //get all the categorys
+        List<Integer> categorys = xmlPath.getList("response.rows.row.category");
+        System.out.println("list = " + categorys);
+
+        String id = xmlPath.getString("response.rows.row[0].@_id");
+        System.out.println("id = " + id);
+
+        //aşağıdaki soruları değiştirmek gerekiyor, bunlar github'dan gelenler
+
+        /*//get all unknowns
+        List<Integer> unknowns = xmlPath.getList("response.rows.row.unknown");
         System.out.println("unknowns = " + unknowns);
         //get 2005 other
-        int other2005 = xmlPath.getInt("response.row.row[2].other");
+        int other2005 = xmlPath.getInt("response.rows.row[2].other");
         System.out.println("other2005 = " + other2005);
         //get 2007 _address
-        String address2007 = xmlPath.getString("response.row.row[4].@_address");
-        System.out.println("address2007 = " + address2007);
+        String address2007 = xmlPath.getString("response.rows.row[4].@_address");
+        System.out.println("address2007 = " + address2007);*/
 
 
     }
