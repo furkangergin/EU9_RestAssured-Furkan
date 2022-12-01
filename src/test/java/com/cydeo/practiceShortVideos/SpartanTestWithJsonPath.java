@@ -8,6 +8,8 @@ import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+import java.util.List;
+
 import static io.restassured.RestAssured.*;
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -56,8 +58,57 @@ public class SpartanTestWithJsonPath extends SpartanTestBase {
         assertEquals("Female",gender);
         assertEquals(7959094216L, phone);
 
+    }
+    @Test
+    public void test2(){
+
+        ////get me name of spartans who name contains 'e'
+
+        Response response = get("/api/spartans");
+
+        JsonPath jsonPath = response.jsonPath();
+
+        List<Object> allSpartans = jsonPath.get();
+       System.out.println("allSpartans = " + allSpartans); // bütün spartanları yazdı
+       System.out.println("allSpartans.size() = " + allSpartans.get(1));
+
+        List<String> names = jsonPath.getList("name");//her spartanın isimlerini yazdır
+      //  System.out.println("names = " + names);
+
+        List<String> namesContainsE = jsonPath.getList("findAll{it.name.contains('e')}.name");
+        System.out.println("namesContainsE = " + namesContainsE);
+
 
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
