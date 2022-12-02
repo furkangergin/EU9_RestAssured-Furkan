@@ -42,6 +42,8 @@ public class SpartanTestWithJsonPath extends SpartanTestBase {
 
         JsonPath jsonPath = response.jsonPath();
 
+
+
         //how to read value with JsonPath?
         int id = jsonPath.getInt("id");
         String name = jsonPath.getString("name");
@@ -69,17 +71,20 @@ public class SpartanTestWithJsonPath extends SpartanTestBase {
         JsonPath jsonPath = response.jsonPath();
 
         List<Object> allSpartans = jsonPath.get();
-       System.out.println("allSpartans = " + allSpartans); // bütün spartanları yazdı
-       System.out.println("allSpartans.size() = " + allSpartans.get(1));
+     //  System.out.println("allSpartans = " + allSpartans); // bütün spartanları yazdı
+      // System.out.println("allSpartans.size() = " + allSpartans.get(1));
 
         List<String> names = jsonPath.getList("name");//her spartanın isimlerini yazdır
       //  System.out.println("names = " + names);
 
         List<String> namesContainsE = jsonPath.getList("findAll{it.name.contains('e')}.name");
+
+        System.out.println("namesContainsE.size() = " + namesContainsE.size());
         System.out.println("namesContainsE = " + namesContainsE);
 
-
     }
+
+
 
 
 
