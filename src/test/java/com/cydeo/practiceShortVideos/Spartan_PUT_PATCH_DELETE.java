@@ -1,4 +1,4 @@
-package com.cydeo.day7;
+package com.cydeo.practiceShortVideos;
 
 import com.cydeo.utilities.*;
 import io.restassured.http.*;
@@ -8,7 +8,7 @@ import java.util.*;
 
 import static io.restassured.RestAssured.*;
 
-public class PutAndPatchRequestDemo extends SpartanTestBase {
+public class Spartan_PUT_PATCH_DELETE extends SpartanTestBase {
 
 
     @DisplayName("PUT request to one spartan for update with Map")
@@ -41,9 +41,9 @@ public class PutAndPatchRequestDemo extends SpartanTestBase {
     @Test
     public void PATCHRequest(){
         //just like post request we have different options to send body;
-            //String
-            //Map
-            //POJO
+        //String
+        //Map
+        //POJO
         // we will go with map
         Map<String,Object> putRequestMap = new LinkedHashMap<>();
         putRequestMap.put("phone",8811111111L);
@@ -68,11 +68,11 @@ public class PutAndPatchRequestDemo extends SpartanTestBase {
         int idToDelete= 258;
 
 
-            given().pathParam("id",idToDelete)
-                    .when().delete("/api/spartans/{id}")
-                    .then().statusCode(204);
+        given().pathParam("id",idToDelete)
+                .when().delete("/api/spartans/{id}")
+                .then().statusCode(204);
 
-            //send a get request after you delete make sure you are getting 404
+        //send a get request after you delete make sure you are getting 404
 
     }
 
