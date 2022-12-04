@@ -87,8 +87,8 @@ public class SpartanPOSTRequest extends SpartanTestBase {
     public void postMethod3(){
         //create one object from your pojo, send it as a JSON
         Spartan spartan = new Spartan();
-        spartan.setName("SeverusSpartan");
-        spartan.setGender("Male");
+        spartan.setName("Asli");
+        spartan.setGender("Female");
         spartan.setPhone(8877445596L);
 
         System.out.println("spartan = " + spartan);
@@ -102,11 +102,9 @@ public class SpartanPOSTRequest extends SpartanTestBase {
         //verify status code
         assertThat(response.statusCode(),is(201));
         assertThat(response.contentType(),is("application/json"));
-
-        String expectedResponseMessage = "A Spartan is Born!";
-        assertThat(response.path("success"),is(expectedResponseMessage));
-        assertThat(response.path("data.name"),is("SeverusSpartan"));
-        assertThat(response.path("data.gender"),is("Male"));
+        assertThat(response.path("success"),is("A Spartan is Born!"));
+        assertThat(response.path("data.name"),is("Asli"));
+        assertThat(response.path("data.gender"),is("Female"));
         assertThat(response.path("data.phone"),is(8877445596L));
 
         response.prettyPrint();
@@ -117,13 +115,13 @@ public class SpartanPOSTRequest extends SpartanTestBase {
     @DisplayName("POST with Map to Spartan Class")
     @Test
     public void postMethod4(){
-        //this example we implement serialization with creatin spartan object sending as a request body
+        //this example we implement serialization with certain spartan object sending as a request body
         //also implemented deserialization getting the id,sending get request and saving that body as a response
 
         //create one object from your pojo, send it as a JSON
         Spartan spartan = new Spartan();
-        spartan.setName("BruceWayne");
-        spartan.setGender("Male");
+        spartan.setName("eslem");
+        spartan.setGender("Female");
         spartan.setPhone(8877445596L);
 
         System.out.println("spartan = " + spartan);
