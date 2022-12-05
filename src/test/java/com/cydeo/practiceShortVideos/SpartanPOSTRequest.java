@@ -112,7 +112,7 @@ public class SpartanPOSTRequest extends SpartanTestBase {
 
     }
 
-    @DisplayName("POST with Map to Spartan Class")
+
     @Test
     public void postMethod4(){
         //this example we implement serialization with certain spartan object sending as a request body
