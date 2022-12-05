@@ -82,7 +82,7 @@ public class SpartanPOSTRequest extends SpartanTestBase {
         response.prettyPrint();
     }
 
-    @DisplayName("POST with Map to Spartan Class")
+
     @Test
     public void postMethod3(){
         //create one object from your pojo, send it as a JSON
