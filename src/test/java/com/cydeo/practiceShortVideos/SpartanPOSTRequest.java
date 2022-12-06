@@ -32,6 +32,10 @@ public class SpartanPOSTRequest extends SpartanTestBase {
 */
     @Test
     public void postMethod1(){
+        //we have different options to send body;
+        //String
+        //Map
+        //POJO
 
         String requestJsonBody = "{\"gender\":\"Male\",\n" +
                 "\"name\":\"Severus\",\n" +
