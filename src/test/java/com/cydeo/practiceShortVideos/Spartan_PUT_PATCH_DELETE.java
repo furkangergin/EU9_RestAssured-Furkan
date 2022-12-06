@@ -24,7 +24,8 @@ public class Spartan_PUT_PATCH_DELETE extends SpartanTestBase {
         putRequestMap.put("gender","Male");
         putRequestMap.put("phone",9811111111L);
 
-        given().contentType(ContentType.JSON) //hey api I am sending JSON body
+        given().contentType(ContentType.JSON) //hey api I am sending JSON body //acceptType yok, çünkü response body yok!
+
                 .body(putRequestMap).log().body()
                 .and().pathParam("id",106)
                 .when().put("/api/spartans/{id}")
