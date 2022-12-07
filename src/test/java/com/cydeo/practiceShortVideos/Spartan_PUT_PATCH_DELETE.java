@@ -11,6 +11,7 @@ import static io.restassured.RestAssured.*;
 public class Spartan_PUT_PATCH_DELETE extends SpartanTestBase {
 
 
+
     @DisplayName("PUT request to one spartan for update with Map")
     @Test
     public void PUTRequest(){
