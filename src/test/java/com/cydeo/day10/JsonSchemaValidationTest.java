@@ -10,7 +10,7 @@ import java.io.*;
 
 import static io.restassured.RestAssured.*;
 
-public class JsonSchemaValidationTest extends SpartanAuthTestBase {
+public class  JsonSchemaValidationTest extends SpartanAuthTestBase {
 
     @DisplayName("GET request to verify one spartan against to schema")
     @Test
