@@ -11,7 +11,7 @@ public class ParametrizedTestInJunit5 {
 
         @ParameterizedTest
         @ValueSource(ints = {1,3,5,6,7,9,10,5,21,32})
-        public void testMultipleNumbers(int number){
+        public void testMultipleNumbers(int number){ //testCase
 
          System.out.println("number = " + number);
                 Assertions.assertTrue(number > 5);
@@ -30,7 +30,7 @@ public class ParametrizedTestInJunit5 {
     // check status code 200
 
     @ParameterizedTest
-    @ValueSource(ints = {22030,22031, 22032, 22033 , 22034, 22035, 22036})
+    @ValueSource(ints = {22030,22031, 22032, 22033 , 22034, 22035, 22036}) //same request with different input
     public void zipCodeTest(int zipCode){
 
             given()
