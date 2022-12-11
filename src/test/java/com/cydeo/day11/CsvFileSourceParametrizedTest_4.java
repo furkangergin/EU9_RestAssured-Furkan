@@ -7,7 +7,7 @@ import org.junit.jupiter.params.provider.*;
 import static io.restassured.RestAssured.*;
 import static org.hamcrest.Matchers.*;
 
-public class CsvFileSourceParametrizedTest {
+public class CsvFileSourceParametrizedTest_4 {
 
     // Write a parameterized test for this request
     // Get the data from csv source

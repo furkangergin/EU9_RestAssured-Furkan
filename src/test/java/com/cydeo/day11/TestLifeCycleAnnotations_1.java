@@ -2,7 +2,7 @@ package com.cydeo.day11;
 
 import org.junit.jupiter.api.*;
 
-public class TestLifeCycleAnnotations {
+public class TestLifeCycleAnnotations_1 {
 
     //beforeClass is testNg version of beforeAll, same logic
     @BeforeAll

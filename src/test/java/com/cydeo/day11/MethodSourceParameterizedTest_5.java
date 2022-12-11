@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.*;
 
 import java.util.*;
 
-public class MethodSourceParameterizedTest {
+public class MethodSourceParameterizedTest_5 {
 
 
     @ParameterizedTest

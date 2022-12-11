@@ -6,7 +6,7 @@ import org.junit.jupiter.params.provider.*;
 
 import static io.restassured.RestAssured.*;
 
-public class ParametrizedTestInJunit5 {
+public class ParametrizedTestInJunit5_2 {
 
 
         @ParameterizedTest

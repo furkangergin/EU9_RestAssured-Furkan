@@ -8,7 +8,7 @@ import static io.restassured.RestAssured.*;
 import static org.hamcrest.MatcherAssert.*;
 import static org.hamcrest.Matchers.*;
 
-public class CsvSourceParametrizedTest {
+public class CsvSourceParametrizedTest_3 {
 
     // Test first number + second number = third number
 //            1, 3 , 4
@@ -16,7 +16,7 @@ public class CsvSourceParametrizedTest {
 //            8, 7 , 15
 //            10, 9 , 19
 
-    @ParameterizedTest
+    @ParameterizedTest //4 different input
     @CsvSource({"1, 3 , 4",
             "2, 3 , 5",
             "8, 7 , 15",
@@ -68,7 +68,8 @@ public class CsvSourceParametrizedTest {
                 .then()
                 .statusCode(200)
                 .and()
-                .body("places.'place name'", everyItem(containsStringIgnoringCase(city)))
+                .body("places.'place name'", everyItem(containsStringIgnoringCase(city))) //space olduğu için '' kullandık
+                                                                                                // everyItem similar to forEach loop
                 //.log().body()
                 .extract()
                 .jsonPath().getList("places").size();
