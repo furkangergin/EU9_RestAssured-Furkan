@@ -14,7 +14,7 @@ public class ParametrizedTestInJunit5_2 {
         public void testMultipleNumbers(int number){ //testCase
 
          System.out.println("number = " + number);
-                Assertions.assertTrue(number > 5);
+              Assertions.assertTrue(number > 5);
 
         }
 

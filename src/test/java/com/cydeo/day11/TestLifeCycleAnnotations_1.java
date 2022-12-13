@@ -25,7 +25,7 @@ public class TestLifeCycleAnnotations_1 {
         System.out.println("Test 1 is running");
     }
 
-    @Disabled
+   // @Disabled
     @Test
     public void test2(){
         System.out.println("Test 2 is running");

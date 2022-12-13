@@ -9,7 +9,7 @@ import java.util.*;
 
 import static io.restassured.RestAssured.*;
 
-public class BookitParametrized {
+public class BookitParametrized_7 {
 
 
         public static List<Map<String,String>> getExcelData(){
